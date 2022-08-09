@@ -1,0 +1,34 @@
+compiladores:
+	vantagens:
+		1. garantia de execução sem erros.
+		2. bem mais rápido do que interpretador.
+		3. "resultados mais confiáveis", devido as estapas
+		   de validação e atimização. *** duvidas na confiabilidade
+		4. eficiência muito maior do que interpretador.
+		5. não consome muito recurso como mémória. **
+		6. estruturas de dados mais complexas *> para otimização
+		7. otimização do código fonte.
+		8. dificuldade de ser quebrado e visualizado.
+		9. código fonte original.
+		
+interpretadores:
+	vantagens:
+		a. diagnóstico de erros mais precisos.
+		b. portável para diferentes arquiteturas.
+		c. independente do S.O. *> se tiver o interpretador
+		d. tipagem dinâmica ajuda o código possuir um
+		   alto nível. ***
+		e. mais fácil de inspecionar e modificar o código. ***
+		f. correções e alterações realizadoas mais rapidamente. **
+		g. consome menos memória. *** errado
+		h. tempo menor entre a codificação e a execução.
+		i. possibilidade de utilizar -reflexão--> consegiur acessar os objetos e métodos.
+		j. depuração mais simples.
+		k. resultado imediato do programa.
+		
+
+fonte 
+   => interpretador -> saída
+entradas
+
+

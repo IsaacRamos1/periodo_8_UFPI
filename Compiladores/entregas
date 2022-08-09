@@ -1,0 +1,13 @@
+ Aula Compiladores 02/08/2022
+ 
+ -> Especificação Trabalho Final da Disciplina
+	* desenvolver um compilador de um subconjunto básico da linguagem Python
+    Composição:
+    	* análise sintatica(+lexica), com geração da AST - dia 18/08/2022;
+    	* análise sintática com análise semântica - dia 20/09/2022;
+    	* geração de código - dia 04/10/2022
+    Linguagem utilizada:
+    	qualquer.
+    Linguagem fonte:
+    	Python simplificado.
+    	

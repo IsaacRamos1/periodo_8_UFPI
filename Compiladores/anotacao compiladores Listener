@@ -1,0 +1,45 @@
+----- ANÁLISE SEMÂNTICA --------	v-----------------parse tree anotada ------------------v
+entrada -> análise léxica -> tokens -> [análise sintática -> parser tree -> [Análise Semântica]]
+
+Tradução Dirigida por Sintaxe:
+	auxilia na contrução do código
+	- difinições dirigidas por sintaxe: mais abstratas
+	- ESquemas de tradução: especificam ordem de avaliação
+	
+-> realiza o parsing, constrói parse tree e atravessa a árvore sob demanda para avaliar regras
+semânticas nos nós da parse.
+-> avaliação das regras semânticas pode ser usada para gerar código, guardar informações na tabela de Símbolos, emitir mensagens de erro etc.
+
+prog. fonte -> parse tree -> grafo de dependência
+. atributos sintetizados: computados a partir dos atributos dos nós-filhos (.code de bixo pra root)
+. atributos herdados: computados a partir de nós-pais ou nós-irmãos (acima ou do lado do próprio nó)
+
+parse tree anotada: mostra os valores dos atributos em cada nó
+
+Atividade de Participação: definit a gramática anterior no ANTLR para calcular o valor de uma expressão.
+
+------> aula 9 ago 2022
+
+atributos sintetizados: muito usados na prática
+S-attibuted: usa apenas atributos sintetizados 
+	- podem sempre ser anotadas através
+
+parse tree anotada para 3 * 5 + 4\n
+
+Atributos Herdados: definidos a partir dos pais e/ou dos irmãos na árvore.
+	- úteis para especificar dependência do contexto. Exemplo, se um identificador
+	  aparece à esquerda ou direita de uma atribuição.
+	- sempre possível trabalhar apenas com *atributos sintetizados*.
+
+D -> TL    L.inh = T.type
+T -> int T.type = integer
+T -> real  T.type = real
+L -> L', id  L'.inh = L.inh
+	     addType(id.entry, L.inh)
+L -> id  addType(id.entry, L.inh)
+
+Grafos de dependência: importante para ordenação dos nós em que todas as arestas vão de um nó anterior para nós posteriores.
+
+uma SDD é S-atribuita se todo atributo é sintetizado
+L-atribuida se as arestas do grafo podem ser direcionadas
+	
